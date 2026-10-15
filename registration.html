@@ -1,131 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Registration</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Student Registration Form</title>
-  <style>
-    body { font-family: Georgia, serif; background: #f3f5f7; color: #222; margin: 0; padding: 24px; }
-    form { max-width: 560px; margin: 0 auto; background: #fff; padding: 24px 28px; border: 1px solid #c9d1d9; border-radius: 6px; }
-    h1 { margin-top: 0; font-size: 1.6rem; }
-    fieldset { border: 1px solid #c9d1d9; margin: 0 0 16px; padding: 12px 16px; }
-    legend { font-weight: bold; padding: 0 6px; }
-    .field { margin-bottom: 14px; }
-    label { display: block; margin-bottom: 4px; font-weight: bold; }
-    .inline label { display: inline; font-weight: normal; margin-right: 14px; }
-    input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, textarea {
-      width: 100%; padding: 8px; font: inherit; border: 1px solid #8b96a3; border-radius: 4px; box-sizing: border-box;
-    }
-    input:focus, select:focus, textarea:focus, button:focus-visible { outline: 3px solid #1f6feb; outline-offset: 1px; }
-    input:user-invalid, textarea:user-invalid, select:user-invalid { border-color: #b3261e; }
-    small { color: #555; display: block; margin-top: 3px; }
-    .req { color: #b3261e; }
-    button { font: inherit; padding: 9px 20px; margin-right: 8px; border: 1px solid #1f3a5f; border-radius: 4px; cursor: pointer; }
-    button[type="submit"] { background: #1f3a5f; color: #fff; }
-    button[type="reset"] { background: #fff; color: #1f3a5f; }
-  </style>
+    <title>Student Registration</title>
 </head>
 <body>
-      <form action="#" method="post">
-    <h1>Student Registration Form</h1>
-    <p><span class="req">*</span> Required field</p>
+     <h1>Student Registration Form</h1>
 
-    <fieldset>
-      <legend>Account Information</legend>
+  <form>
 
-      <div class="field">
-        <label for="fullname">Full Name <span class="req">*</span></label>
-        <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz"
-               required minlength="3" maxlength="60" pattern="[A-Za-z .'\-]+"
-               title="Letters, spaces, periods, apostrophes, and hyphens only">
-      </div>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required minlength="3">
+    <br><br>
 
-      <div class="field">
-        <label for="studentid">Student ID <span class="req">*</span></label>
-        <input type="text" id="studentid" name="studentid" placeholder="2026-12345"
-               required pattern="\d{4}-\d{5}" title="Format: YYYY-NNNNN (e.g., 2026-12345)">
-        <small>Format: 2026-12345</small>
-      </div>
+    <label for="studentid">Student ID:</label>
+    <input type="text" id="studentid" required>
+    <br><br>
 
-      <div class="field">
-        <label for="email">Email <span class="req">*</span></label>
-        <input type="email" id="email" name="email" placeholder="name@school.edu" required>
-      </div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br><br>
 
-      <div class="field">
-        <label for="password">Password <span class="req">*</span></label>
-        <input type="password" id="password" name="password" required minlength="8" maxlength="30"
-               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-               title="At least 8 characters with one uppercase letter, one lowercase letter, and one number">
-        <small>At least 8 characters, with uppercase, lowercase, and a number.</small>
-      </div>
-    </fieldset>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required minlength="8">
+    <br><br>
 
-    <fieldset>
-      <legend>Personal Details</legend>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" required>
+    <br><br>
 
-      <div class="field">
-        <label for="birthday">Birthday <span class="req">*</span></label>
-        <input type="date" id="birthday" name="birthday" required min="1960-01-01" max="2012-12-31">
-      </div>
+    Gender:
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
 
-      <div class="field inline">
-        <label>Gender <span class="req">*</span></label>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label>
-      </div>
+    <label for="program">Program:</label>
+    <select id="program" required>
+      <option value="">-- Select --</option>
+      <option value="bsit">BSIT</option>
+      <option value="bscs">BSCS</option>
+      <option value="bsis">NURSING?</option>
+    </select>
+    <br><br>
 
-      <div class="field">
-        <label for="program">Program <span class="req">*</span></label>
-        <select id="program" name="program" required>
-          <option value="">-- Select a program --</option>
-          <option value="bsit">BS Information Technology</option>
-          <option value="bscs">BS Computer Science</option>
-          <option value="bsis">BS Information Systems</option>
-          <option value="bsce">BS Computer Engineering</option>
-        </select>
-      </div>
+    Hobbies:
+    <input type="checkbox" id="reading" name="hobbies" value="reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+    <label for="gaming">Gaming</label>
+    <input type="checkbox" id="sports" name="hobbies" value="sports">
+    <label for="sports">Sports</label>
+    <br><br>
 
-      <div class="field inline">
-        <label>Hobbies</label>
-        <input type="checkbox" id="reading" name="hobbies" value="reading">
-        <label for="reading">Reading</label>
-        <input type="checkbox" id="gaming" name="hobbies" value="gaming">
-        <label for="gaming">Gaming</label>
-        <input type="checkbox" id="sports" name="hobbies" value="sports">
-        <label for="sports">Sports</label>
-        <input type="checkbox" id="music" name="hobbies" value="music">
-        <label for="music">Music</label>
-      </div>
-    </fieldset>
+    <label for="address">Address:</label><br>
+    <textarea id="address" rows="3" cols="30" required></textarea>
+    <br><br>
 
-    <fieldset>
-      <legend>Contact and Notes</legend>
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" rows="4" cols="30" maxlength="200"></textarea>
+    <br><br>
 
-      <div class="field">
-        <label for="address">Address <span class="req">*</span></label>
-        <textarea id="address" name="address" rows="3" required minlength="10" maxlength="200"
-                  placeholder="House no., street, barangay, city"></textarea>
-      </div>
-
-      <div class="field">
-        <label for="comments">Comments</label>
-        <textarea id="comments" name="comments" rows="4" maxlength="300"
-                  placeholder="Anything else we should know?"></textarea>
-        <small>Up to 300 characters.</small>
-      </div>
-    </fieldset>
-
-    <button type="submit">Register</button>
+    <button type="submit">Submit</button>
     <button type="reset">Reset</button>
+
   </form>
 </body>
 </html>
