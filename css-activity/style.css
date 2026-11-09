@@ -1,13 +1,36 @@
+/* Section 6: page background */
 body {
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     font-family: Arial, sans-serif;
 }
 
+/* Element selector: all h1 */
 h1 {
-    color: darkblue;
+    color: navy;
 }
 
+/* ID selector: only the element with id="main-title" */
+#main-title {
+    text-align: center;
+}
+
+/* Element selector: all paragraphs */
 p {
-    font-size: 16px;
-    line-height: 1.6;
+    color: #333333;
+}
+
+/* Class selector: elements with class="intro" */
+.intro {
+    color: green;
+    font-weight: bold;
+}
+
+/* Class selector: the card box */
+.card {
+    background-color: white;
+}
+
+/* Descendant selector: paragraphs inside .card */
+.card p {
+    color: #555;
 }
